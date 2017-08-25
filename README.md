@@ -36,4 +36,5 @@ $ git clone https://github.com/mrkansa/baby.git
 $ cd baby
 
 $mvn -version
+
 $mvn package -q (may need to run this command more than once due to package downloads in background)
