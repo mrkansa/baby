@@ -33,4 +33,19 @@ public class BabySitterTest {
         assertEquals("48", babySitter.baby(4));
     }
 
+    @Test
+    public void whenBabySitterIsPassedASleepingBabyAtHourFiveItReturnsFortyEightPlusEight() {
+        assertEquals("56", babySitter.baby(5));
+    }
+
+    @Test
+    public void whenBabySitterIsPassedASleepingBabyAtHourSixItReturnsFiftySixPlusEight() {
+        assertEquals("64", babySitter.baby(6));
+    }
+
+    @Test
+    public void whenBabySitterIsPassedASleepingBabyAtHourSevenItReturnsSixtyFourPlusEight() {
+        assertEquals("72", babySitter.baby(7));
+    }
+
 }
