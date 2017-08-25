@@ -48,4 +48,24 @@ public class BabySitterTest {
         assertEquals("72", babySitter.baby(7));
     }
 
+    @Test
+    public void whenBabySitterIsPassedASleepingBabyAtHourEightItReturnsSeventyTwoPlusSixteen() {
+        assertEquals("88", babySitter.baby(8));
+    }
+
+    @Test
+    public void whenBabySitterIsPassedASleepingBabyAtHourNineItReturnsEightyEightPlusSixteen() {
+        assertEquals("104", babySitter.baby(9));
+    }
+
+    @Test
+    public void whenBabySitterIsPassedASleepingBabyAtHourTenItReturnsOneHundredFourPlusSixteen() {
+        assertEquals("120", babySitter.baby(10));
+    }
+
+    @Test
+    public void whenBabySitterIsPassedASleepingBabyAtHourElevenItReturnsOneHundredTwentyPlusSixteen() {
+        assertEquals("136", babySitter.baby(11));
+    }
+
 }
