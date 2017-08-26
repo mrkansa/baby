@@ -28,7 +28,7 @@ assume when baby is up until midnight, assume 3rd shift might generally end earl
 
 To run:
 
-install manven (Maven 3.3+ require JDK 1.7 or above to execute):
+install maven (Maven 3.3+ require JDK 1.7 or above to execute):
 https://maven.apache.org/download.cgi
 
 $ git clone https://github.com/mrkansa/baby.git
