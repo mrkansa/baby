@@ -25,9 +25,9 @@ stages:
 #  - FOO=one
 #  - FOO=two
 
-jobs:
-  include:
-    - stage: compile
-      script: ./compile
-    - stage: deploy
-      script: ./deploy
+#jobs:
+#  include:
+#    - stage: compile
+#      script: ./compile
+#    - stage: deploy
+#      script: ./deploy
