@@ -14,8 +14,6 @@ matrix:
   allow_failures:
     - env: JDK=8-ea
 
-script: ./.travis.sh
-
 stages:
   - compile
   - test
