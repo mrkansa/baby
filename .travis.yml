@@ -1,42 +1,26 @@
-language:  java
-
-env: 
-
-  - JDK=8
-
+language: java
+env:
+- JDK=8
 dist: trusty
 addons:
-  apt: 
+  apt:
     packages:
-      - oracle-java8-installer
-
+    - oracle-java8-installer
 matrix:
   allow_failures:
-    - env: JDK=8-ea
-
+  - env: JDK=8-ea
 stages:
-  - compile
-  - test
-  - deploy
-
+- compile
+- test
+- deploy
 deploy:
   provider: pages
   skip_cleanup: true
-  #local_dir: myfolder/  # or remove this line to upload from root of repo
-  #github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   api_key: $GITHUB_TOKEN
+'GITHUB_TOKEN=Y31EcPcat ':
+  travis:
+    ymlOj5k:
+      secure: bbjEdqfELWGJh5Q+6V5+DbNmAOIMMDAnYPTlVwUoshHFpl+PHUvD2jU+AHASo7bEJbnKHxJ14BqDMDYdBbLxgH6K10m7T2mKL4aJ3+iAR4QoZ5G4k/TeVD3C4PHK4u32FEWHG+ODIBGG9ZO5D+TlsZd6gFF+4Z76UmvXlEFezTTxuJThYx1nK36KAqqKaQ0aR2klAnUK9Ai6zq+TvOjRCPH7pNW/LsUkYQKptVDvDgbX83UeWjr0O7uNiFUUtC0a9hg83ogra/5M9fYKTy0XDy7VViaXjmZAW3YgX4c6sQbQDW1NVidYk+pjLTgDOjSiFdKKXEueMo0ELAPJTPr4ZXsh+x8dDyZ4xvUgX7p8aga6XY22HbvC1MMcYjtCZ2kepaQYunR5ksfduXltI13kpmLo6lhw3PNZjLRgoLtaTLi0LNvEMB2zvWuG0uzwzJL9G3bf4firMEspNes5hSMI5Cldbxs6KG8KjRkQgp34stOG7QJQ9QZ0gxXnWpA7RB6ox65kiTqUAMx7YxLzsyTt5mUiJlVup3AsQ+v1e69P81zfFLtUpHbwxmznXCEQnk5sovU7bEumL04STEgERaNSJI5cZTv9WH4OBmEw35xfGbxMzAFhLefg3CWRie3aWtEcSvuXuvF0r4ao0DvgV9MCtw2EpaWICz2fP1gShr2ndH8=
+
   on:
     branch: master
-
-
-
-#env:
-#  - FOO=one
-#  - FOO=two
-
-#jobs:
-#  include:
-#    - stage: compile
-#      script: ./compile
-#    - stage: deploy
-#      script: ./deploy
