@@ -8,6 +8,8 @@ matrix:
   - env: JDK=8-ea
 deploy:
   provider: openshift
+  edge:
+    branch: openshift-deps
   user: mrkansa@gmail.com
   skip_cleanup: true
   project: mkansa/baby
