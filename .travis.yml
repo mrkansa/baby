@@ -1,9 +1,8 @@
+
 language: java
 env:
   matrix:
   - JDK=8
-  global:
-    secure: dQ9X+7OXZu6VdhXgJuGr3z32L2xBIO5NeNvq8JXxJEjmC6JUxXq1byJT4GrQEKIbSYIIj6pCy+/pr8tkL2VwXXqRvcGaPSswbjb88BFIAnvgHTenKNpFdQ7MkJuQQbqc7qE4H4vrwiIvd6slyafrbw0i3iQsj/tKBqzrGFbmbcXSOnb3LfWa99UIuH4dQAQzQbSB3IY8zf0S7QkaD5gxY/XX+5ooL1XSrpjE3ZoVIRfWxzaO47tcWUsFT+19Qr+hY/Em2aPNzu7xDfUi7sZcLtiHBLTsjfK2kRDOuNWmeHE7mWYaN/WJCumTN6riJnlWNRtxv+Jz/CVmg1TKFVtRMyNYH35ymg5ANS6lGLmuTpa2JYK6TAcTrR18DIa+ry3c8Er0SiBJ1SBO0u3LjAItO3lvQL6dTjrin1Kr3cJlzY4s9KJbAaALBPaO4Eh9/Hacn6wpcAVYq+u4hzex9HtuPpvz7PEbGfBU78PDuE5p2w3Wl9Me2J17b4wc1fRY0kyyHRoDbfPsq4mSJ38oSnHuCHtZtvYfAQHBbiUYnDltqgcOewlh5fuTshmVrTPNuz3nk8EMgp4AZVXqedlBIYspEDH8U76b/Bo4n8ucs6GwZwujg5uGRzeHP4jMlcdhwssdtm/6Fj0ldKDjbG3dTsIUZosMqB42Lflnzj3SKhSK4ew=
 dist: trusty
 addons:
   apt:
@@ -12,13 +11,14 @@ addons:
 matrix:
   allow_failures:
   - env: JDK=8-ea
+
 stages:
-- compile
-- test
-- deploy
+  - compile
+  - test
+  - deploy
+
 deploy:
-  provider: pages
-  skip_cleanup: true
-api_key: "$GITHUB_TOKEN"
-  on:
-    branch: master
+  - provider: puppetforge
+  - user: "mkansa"
+  - password:
+      secure: "ZP5sB9PCXbE3QyP4Uipu4u8V6G9BHhnidkv/Eb2/65aTuVhosDFWYNRbcPoP/6nmuF/8hmslJ3Rq54ze7YJDrTsjMxFh/0V0qd4vOCL1Q2w6m+83U5CFLNrj0mI+2Je12tyRufjF5P1D3Js7etJQVQ8g3cKjjZFfyrkOd9RWSwtcz0Q9uKs7hXu+bMZ668W9erF7H0ODKcUU4UgoT/Zd2wDLg6B76xWYOHQcTabyADbzLPSgYTqKSzYAywqlh6kRJEpDVyxofd0nwKUq9S5vkLZZ3ZVjW/KuVWg5vgBGmTmnNBX2Nsj7abqkKNI+FhdJnzpBssm6r8ZgLDgWQaixdg5/abLAkavtsee1nWfE3neqNZmweAV0U4KyJm45RU/epQ20dQrI4hTlJpabnbTZ+xFNmRR8wAU5tbUfSL3oJYa8eceCKxKWO6aW8F7wWiJv1xoVMu2JStQg1Kfv1/RRZ5dJOvmtzqSpVHSNP33EVPPD1pZYm2GAyh5Y36TivdXWJPhsEIpz7SF27qcY7MDnV7Zra0hHEuXj0Lbg5+YadIbXuQFL+fkFrPK806PUsbgOxgQd5VXtCUYf/u7sPGOKt5bX21zJO1oP0dK2+V6utStgmkh/IcnOq4k+QS2nVvtbd/smj6XTM+HevIIKZzeI01tO/geI988hiWPBBwW7Trc="
