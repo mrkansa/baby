@@ -19,6 +19,6 @@ stages:
 
 deploy:
   - provider: puppetforge
-  - user: "mkansa"
+  - user: "mrkansa@gmail.com"
   - password:
       secure: "ZP5sB9PCXbE3QyP4Uipu4u8V6G9BHhnidkv/Eb2/65aTuVhosDFWYNRbcPoP/6nmuF/8hmslJ3Rq54ze7YJDrTsjMxFh/0V0qd4vOCL1Q2w6m+83U5CFLNrj0mI+2Je12tyRufjF5P1D3Js7etJQVQ8g3cKjjZFfyrkOd9RWSwtcz0Q9uKs7hXu+bMZ668W9erF7H0ODKcUU4UgoT/Zd2wDLg6B76xWYOHQcTabyADbzLPSgYTqKSzYAywqlh6kRJEpDVyxofd0nwKUq9S5vkLZZ3ZVjW/KuVWg5vgBGmTmnNBX2Nsj7abqkKNI+FhdJnzpBssm6r8ZgLDgWQaixdg5/abLAkavtsee1nWfE3neqNZmweAV0U4KyJm45RU/epQ20dQrI4hTlJpabnbTZ+xFNmRR8wAU5tbUfSL3oJYa8eceCKxKWO6aW8F7wWiJv1xoVMu2JStQg1Kfv1/RRZ5dJOvmtzqSpVHSNP33EVPPD1pZYm2GAyh5Y36TivdXWJPhsEIpz7SF27qcY7MDnV7Zra0hHEuXj0Lbg5+YadIbXuQFL+fkFrPK806PUsbgOxgQd5VXtCUYf/u7sPGOKt5bX21zJO1oP0dK2+V6utStgmkh/IcnOq4k+QS2nVvtbd/smj6XTM+HevIIKZzeI01tO/geI988hiWPBBwW7Trc="
