@@ -1,6 +1,9 @@
 language: java
 env:
-- JDK=8
+  matrix:
+  - JDK=8
+  global:
+    secure: dQ9X+7OXZu6VdhXgJuGr3z32L2xBIO5NeNvq8JXxJEjmC6JUxXq1byJT4GrQEKIbSYIIj6pCy+/pr8tkL2VwXXqRvcGaPSswbjb88BFIAnvgHTenKNpFdQ7MkJuQQbqc7qE4H4vrwiIvd6slyafrbw0i3iQsj/tKBqzrGFbmbcXSOnb3LfWa99UIuH4dQAQzQbSB3IY8zf0S7QkaD5gxY/XX+5ooL1XSrpjE3ZoVIRfWxzaO47tcWUsFT+19Qr+hY/Em2aPNzu7xDfUi7sZcLtiHBLTsjfK2kRDOuNWmeHE7mWYaN/WJCumTN6riJnlWNRtxv+Jz/CVmg1TKFVtRMyNYH35ymg5ANS6lGLmuTpa2JYK6TAcTrR18DIa+ry3c8Er0SiBJ1SBO0u3LjAItO3lvQL6dTjrin1Kr3cJlzY4s9KJbAaALBPaO4Eh9/Hacn6wpcAVYq+u4hzex9HtuPpvz7PEbGfBU78PDuE5p2w3Wl9Me2J17b4wc1fRY0kyyHRoDbfPsq4mSJ38oSnHuCHtZtvYfAQHBbiUYnDltqgcOewlh5fuTshmVrTPNuz3nk8EMgp4AZVXqedlBIYspEDH8U76b/Bo4n8ucs6GwZwujg5uGRzeHP4jMlcdhwssdtm/6Fj0ldKDjbG3dTsIUZosMqB42Lflnzj3SKhSK4ew=
 dist: trusty
 addons:
   apt:
@@ -16,11 +19,5 @@ stages:
 deploy:
   provider: pages
   skip_cleanup: true
-  api_key:
-#    'GITHUB_TOKEN=Y31EcPcat ':
-#  travis:
-#    ymlOj5k:
-     - secure: bbjEdqfELWGJh5Q+6V5+DbNmAOIMMDAnYPTlVwUoshHFpl+PHUvD2jU+AHASo7bEJbnKHxJ14BqDMDYdBbLxgH6K10m7T2mKL4aJ3+iAR4QoZ5G4k/TeVD3C4PHK4u32FEWHG+ODIBGG9ZO5D+TlsZd6gFF+4Z76UmvXlEFezTTxuJThYx1nK36KAqqKaQ0aR2klAnUK9Ai6zq+TvOjRCPH7pNW/LsUkYQKptVDvDgbX83UeWjr0O7uNiFUUtC0a9hg83ogra/5M9fYKTy0XDy7VViaXjmZAW3YgX4c6sQbQDW1NVidYk+pjLTgDOjSiFdKKXEueMo0ELAPJTPr4ZXsh+x8dDyZ4xvUgX7p8aga6XY22HbvC1MMcYjtCZ2kepaQYunR5ksfduXltI13kpmLo6lhw3PNZjLRgoLtaTLi0LNvEMB2zvWuG0uzwzJL9G3bf4firMEspNes5hSMI5Cldbxs6KG8KjRkQgp34stOG7QJQ9QZ0gxXnWpA7RB6ox65kiTqUAMx7YxLzsyTt5mUiJlVup3AsQ+v1e69P81zfFLtUpHbwxmznXCEQnk5sovU7bEumL04STEgERaNSJI5cZTv9WH4OBmEw35xfGbxMzAFhLefg3CWRie3aWtEcSvuXuvF0r4ao0DvgV9MCtw2EpaWICz2fP1gShr2ndH8=
-
   on:
     branch: master
