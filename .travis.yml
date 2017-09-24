@@ -19,5 +19,6 @@ stages:
 deploy:
   provider: pages
   skip_cleanup: true
+api_key: "$GITHUB_TOKEN"
   on:
     branch: master
