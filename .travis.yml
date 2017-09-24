@@ -1,4 +1,3 @@
-
 language: java
 env:
   matrix:
@@ -11,14 +10,16 @@ addons:
 matrix:
   allow_failures:
   - env: JDK=8-ea
-
 stages:
-  - compile
-  - test
-  - deploy
-
+- compile
+- test
+- deploy
 deploy:
-  - provider: puppetforge
-  - user: mrkansa@gmail.com
-  - password:
-      secure: "ZP5sB9PCXbE3QyP4Uipu4u8V6G9BHhnidkv/Eb2/65aTuVhosDFWYNRbcPoP/6nmuF/8hmslJ3Rq54ze7YJDrTsjMxFh/0V0qd4vOCL1Q2w6m+83U5CFLNrj0mI+2Je12tyRufjF5P1D3Js7etJQVQ8g3cKjjZFfyrkOd9RWSwtcz0Q9uKs7hXu+bMZ668W9erF7H0ODKcUU4UgoT/Zd2wDLg6B76xWYOHQcTabyADbzLPSgYTqKSzYAywqlh6kRJEpDVyxofd0nwKUq9S5vkLZZ3ZVjW/KuVWg5vgBGmTmnNBX2Nsj7abqkKNI+FhdJnzpBssm6r8ZgLDgWQaixdg5/abLAkavtsee1nWfE3neqNZmweAV0U4KyJm45RU/epQ20dQrI4hTlJpabnbTZ+xFNmRR8wAU5tbUfSL3oJYa8eceCKxKWO6aW8F7wWiJv1xoVMu2JStQg1Kfv1/RRZ5dJOvmtzqSpVHSNP33EVPPD1pZYm2GAyh5Y36TivdXWJPhsEIpz7SF27qcY7MDnV7Zra0hHEuXj0Lbg5+YadIbXuQFL+fkFrPK806PUsbgOxgQd5VXtCUYf/u7sPGOKt5bX21zJO1oP0dK2+V6utStgmkh/IcnOq4k+QS2nVvtbd/smj6XTM+HevIIKZzeI01tO/geI988hiWPBBwW7Trc="
+  provider: openshift
+  user: mrkansa@gmail.com
+  password:
+    secure: h4OaXEesCx0JTgxR3lYJjTCcf3268a0tIC2yhn96UbN5z5P9wsruk8ba6sgExLXUyc6Bfir9aOoga2mf6oJrFWyVD34G/gaJ1kjRqfY5lY18U8KuUqSzR8f/gZgANhsEZJGtaaA0bZp0Ffhv63JrJFft2kmqEOCgd3oND5s24O6d7aHmVYDqcRDJW/Ta6bObfFRJ4zv1dmtMY2+iXFvXCMZ8kmEYuAcEPhlrFQxC4HEs244fef0sNF8XtE/5CfXSJ3Zm+4Lr5tlmbwA6tX6rpAaz7fy6xTxrHqRS7/nTCrfijf2ukhfGaQcJLH38KJyNfZDDvgL9XLv4yPCTvBbZ9iFYaFJe+0wQuEk5XnPgZTDXGwa7bIZpczM+QPyAi57dNly3MvFY3WM5YXzL4EI9INRnXuqmjJZ5v/iIEeYBoB0+Oc9sQL9OfYV+2+jUbQvEjixvDI1L8Avv67n1WmS9HJuJUb7Zx4BmD9iZ5YZL4UglOVwBV3OMCH3xktgvhUYI2m3hITkTtmkZvK0H5XqBNtBfsiCkjUsXI2u2k2TUu4VPvRxwFHaiW9qxHCZcgQP9vaq2pOWGoMhuvI6t2bJUUr7SDNB+ki0HB5TEUu8PPLcP1JSJrLLQBtEh2ZqD+8TSe6egH4wbW3CB+2r0ibpT2agHLrhTegqQbIF2DNpW73A=
+  app: baby
+  domain: baby
+  on:
+    repo: mrkansa/baby
