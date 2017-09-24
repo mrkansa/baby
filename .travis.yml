@@ -3,17 +3,9 @@ env:
   matrix:
   - JDK=8
 dist: trusty
-addons:
-  apt:
-    packages:
-    - oracle-java8-installer
 matrix:
   allow_failures:
   - env: JDK=8-ea
-stages:
-- compile
-- test
-- deploy
 deploy:
   provider: openshift
   user: mrkansa@gmail.com
