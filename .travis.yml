@@ -7,15 +7,9 @@ matrix:
   allow_failures:
   - env: JDK=8-ea
 deploy:
-  provider: openshift
-  edge:
-    branch: openshift-deps
-  user: mrkansa@gmail.com
-  skip_cleanup: true
-  project: mkansa/baby
+  provider: hackage
+  username: mkansa
   password:
-    secure: h4OaXEesCx0JTgxR3lYJjTCcf3268a0tIC2yhn96UbN5z5P9wsruk8ba6sgExLXUyc6Bfir9aOoga2mf6oJrFWyVD34G/gaJ1kjRqfY5lY18U8KuUqSzR8f/gZgANhsEZJGtaaA0bZp0Ffhv63JrJFft2kmqEOCgd3oND5s24O6d7aHmVYDqcRDJW/Ta6bObfFRJ4zv1dmtMY2+iXFvXCMZ8kmEYuAcEPhlrFQxC4HEs244fef0sNF8XtE/5CfXSJ3Zm+4Lr5tlmbwA6tX6rpAaz7fy6xTxrHqRS7/nTCrfijf2ukhfGaQcJLH38KJyNfZDDvgL9XLv4yPCTvBbZ9iFYaFJe+0wQuEk5XnPgZTDXGwa7bIZpczM+QPyAi57dNly3MvFY3WM5YXzL4EI9INRnXuqmjJZ5v/iIEeYBoB0+Oc9sQL9OfYV+2+jUbQvEjixvDI1L8Avv67n1WmS9HJuJUb7Zx4BmD9iZ5YZL4UglOVwBV3OMCH3xktgvhUYI2m3hITkTtmkZvK0H5XqBNtBfsiCkjUsXI2u2k2TUu4VPvRxwFHaiW9qxHCZcgQP9vaq2pOWGoMhuvI6t2bJUUr7SDNB+ki0HB5TEUu8PPLcP1JSJrLLQBtEh2ZqD+8TSe6egH4wbW3CB+2r0ibpT2agHLrhTegqQbIF2DNpW73A=
-  app: baby
-  domain: baby
+    secure: GOfQz8BUdV9ypr/hUOS9/ViJtPyqN+5w0zsSRznLtP/I1vQYeCzKQc7c+FEcVUJcwIlyreGQCAsqzmyfB3geuaDmvKmRipGsB8aR02NPZgK7JpmzRGb0KD1PGIIF6NIh0XeU81yDdVT3EigTivIUugmyTFo9BWaU1LzZqnP4j3AfNRmJas7bkBd5kHagCZIr7ZOz4cIGsFkpW8pElQEWDsYeBmR7QGlBMRhh+vuGZCiBSICKXVJPVXR5l0TauvcjPTwvo/mCAXMH5Odj6tCXNprZfvB86j8Hxq2iAGVACecRBOAqVycQBtoJUzGq47JnXKO3KOMkfO0xmMfBhYbBgyaxJsDnggj8rbnTwKG9BiPmDNZKzoWVVGxnr5DwpPOJi+xDUATCen8++nzZPnWZaaPJvLOGfQ4B3udpE8Z//tlUZEu4Efg/P6TrLMHcGe4bjNz1iBIDCa+5Gx8tXQP2/IgL5z4iyhYUUT1KeP9cKSM+e6zssmwglhUW0jHsuzZ56qkjLtjbIVB0EewOVwk/hFIQBqPwH47l2nk0RgJ66ZlFtKKWiyWgyjtOYtljxIIep/TC+L0g2iOOStO5GSWec1/3QAVbRm+syo8BWEiXl3fqxKFxnK/Auc+AIHrZmQDpm68rjLgLBNYLP2ffbJ00siT8w+kaENaiFAZzBjEOagY=
   on:
     repo: mrkansa/baby
