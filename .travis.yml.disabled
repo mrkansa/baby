@@ -1,0 +1,17 @@
+language: java
+env:
+  matrix:
+  - JDK=8
+dist: trusty
+matrix:
+  allow_failures:
+  - env: JDK=8-ea
+deploy:
+  provider: rubygems
+  api_key:
+    secure: EhkY/wnjOmzULz+CWTENI4R4Ob5Vt9cJq1jtP/HJbIZd3BqWSN4+0ERYJpkiS9G+5QmXuajvAy1yE/z0qXol8dXCeoTPgWN9N1rTIubb15/ZtyCUzgd6V5mHc/A3OT22inX+KbfYyEhaavfepty6Xp8DD7ofU8DWBL+aQr6zwvfM136Qpb1d2ckzW0x/RfHAZ7Jle+QEN2d+3mQMjXDk7NhtVtu5+PnyFJnncHjrJHx3ukpL62D4L1MXe0gL8DSUCxVUiA7LhhUVRrbVR3ULVdACgJP0A6w4hk7R6sTW84DfIrL4YIBgNshXFw6YLtFtQRge43XJIHdqrTfVK+w8zyxmKZ9y+o5zgL7mZ+si4FYU3kVy+aGlGUhQPKSQeqnxiL7GLLmMVPCeq66N7yAaJCdeD2lHVyf8Jrfgv7s8ExTcQk7799DCMWn3JqAtv4jJmkMBYbnyKn8HryTVhxOe0tt8z2DiMW1tOsqQ2J7MqO37v4i9ubNkzUsPN1CFF1ZcRRg48VUANIQXtSL7p+W4xe6gH14G3TEmsH3kPyR5hBPyg9D4Tj19fTOhQFpJ3E9heX16xP2TUg13+pCsGFATLuSuhapimvsy/btC9/IevaWodhYABs8JNaZH2h/krdRM9Hn7CtDZniNYsDwmxmohldirw2IHU9bPijM3nSbXRTU=
+  skip_cleanup: true
+  gem: 
+    baby
+  on:
+    repo: mrkansa/baby
