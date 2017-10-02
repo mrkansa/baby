@@ -4,7 +4,7 @@ Pillar babysitter Kata
 2 main variables for simulation:
 
 baby bed time
-parents home time, implementation in baby2.0
+parents home time, implementation in will be in baby2.0
 
 assume start time of shift will be more consistant than end time of shift, showing up at
 5:00 gets the babysitter paid $12 minimum.
