@@ -1,8 +1,8 @@
 language: java
 env:
   matrix:
-  - JDK=6
-dist: trusty
+  - JDK=8
+dist: trustie
 matrix:
   allow_failures:
   - env: JDK=8-ea
