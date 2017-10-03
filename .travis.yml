@@ -1,11 +1,17 @@
 language: java
 env:
   matrix:
-  - JDK=8
+  - JDK=6
 dist: trusty
 matrix:
   allow_failures:
   - env: JDK=8-ea
+notifications:
+  email:
+    recipients:
+      - admin@tapartnersllc.net
+      - bkansa@yahoo.com
+    on_failure: always
 deploy:
   provider: heroku
   api_key:
