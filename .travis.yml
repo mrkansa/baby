@@ -1,4 +1,4 @@
-language: null
+language: java
 env:
   matrix:
   - JDK=8
@@ -10,7 +10,6 @@ notifications:
   email:
     recipients:
       - admin@tapartnersllc.net
-      - bkansa@yahoo.com
     on_failure: always
 deploy:
   provider: heroku
