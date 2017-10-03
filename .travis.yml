@@ -1,11 +1,11 @@
-language: java
+language: null
 env:
   matrix:
-  - JDK=99
+  - JDK=8
 dist: trusty
 matrix:
   allow_failures:
-  - env: JDK=99-ea
+  - env: JDK=8-ea
 notifications:
   email:
     recipients:
