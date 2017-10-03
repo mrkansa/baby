@@ -26,7 +26,7 @@ assume when baby is up until midnight, assume 3rd shift might generally end earl
 10th hour: 2:00 am -> 3:00 am == (104 + 16) $120
 11th hour: 3:00 am -> 4:00 am == (120 + 16) $136
 
-To run:
+To run locally:
 
 install maven (Maven 3.3+ require JDK 1.7 or above to execute):
 https://maven.apache.org/download.cgi
@@ -35,6 +35,25 @@ $ git clone https://github.com/mrkansa/baby.git
 
 $ cd baby
 
-$mvn -version
+$ mvn -version
 
-$mvn package -q (may need to run this command more than once due to package downloads in background)
+$ mvn package -q (may need to run this command more than once due to package downloads in background)
+
+To trigger CI build with Travis CI:
+
+Make a file change and push a new commit to the repo.  
+
+Access travis-ci.org Job Log here:
+
+https://travis-ci.org/mrkansa/baby
+
+New build will automatically begin upon git push and successful authentication with Github credentials. New build completes or fails.  A build failure only will send email notification per .travis.yml configured email addresses.
+
+Tests are located near line 1045 of the Build Log.
+
+The url of automatic deployment is available near line 1145 will typically look like this:
+
+https://limitless-dawn-63121.herokuapp.com/ deployed to Heroku
+
+The next step in this kata would be to print the TESTS output lines from the build log in the automatic deployment url.
+
